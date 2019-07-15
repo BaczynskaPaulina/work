@@ -1,0 +1,210 @@
+{
+	"rows":
+	[
+		{
+			"question": "Header, body, and footer sections.",
+			"answer": "HubSpot template layouts are divided into three sections, based on where the drag and drop dividers are placed. Each of these sections is wrappers in a div with the following respective classes: header-container-wrapper, body-container-wrapper, footer-container-wrapper.  Directly within each of these divs, there is a container div that can be used (but doesn't have to be) as the primary content wrapper for each section. These divs have a class of container-fluid, and the following respective classes: header-container, body-container, footer-container.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Rows (row-fluid-wrapper & row-fluid).",
+			"answer": "Within these primary containers, each row has a wrapper with the class of row-fluid-wrapper. Within the wrapper, is the row div with the class of row-fluid. Additional rows are created when grouping modules.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Columns (span1-span12).",
+			"answer": "As previously mentioned, the column divs get dynamically assigned a class of span1-span12, based on their width in the Template Builder UI. This class determines the percentage width that they render. Additional columns are created when grouping modules. When you add custom classes via the Template Builder UI, those classes are applied to these divs.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Cell and module wrappers.",
+			"answer": "Each column contains a div with the class of cell-wrapper. Each module is generally wrapped in a span tag with classes specifc to the type of module as well as hs_cos_wrapper.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Included CMS files.",
+			"answer": "There are certain Javascript and CSS files that are automatically attached to all COS templates. Some files can be removed, while others cannot. This article describes the purpose of each of these files. In addition to the files listed here, you can attach your own custom CSS files and Javascript files to your templates.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "jQuery.",
+			"answer": "jQuery is automatically included in the head tag of every HubSpot template. It is rendered as part of the standard_header_includes  HubL variable. You have the ability to choose between the latest version of jQuery 1.11.x or version 1.7.1, in Content Settings.  If you choose to use the latest version of jQuery, you can also choose to include a jQuery migrate script for backwards compatibility with older browsers.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "public_common.css.",
+			"answer": "public_common.css is a file that is included primarily for the HubSpot app navigation. It includes various animations used throughout the app, as well as a few snippets of code to style universal HubSpot elements such as blog featured images and bread crumb navigations.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "layout.css.",
+			"answer": "Layout.css (fomerly known as required_base.css) is the file that is responsible for styling HubSpot's responsive grid. This file is always automatically included in any drag and drop template. It is not included by default in custom coded templates. In addition to the responsive grid CSS, the file includes some classes that can be used to show and hide elements at different viewports.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "hs_default_custom_style.css.",
+			"answer": "Also know as Primary CSS, this file is a global CSS file that is included in all of template layouts by default. This file is analogous to style.css in Wordpress themes. You can disable it in Content Settings or within the Edit > Edit Head feature of Template Builder. If you would like to include it in a coded template, you must use the include_default_custom css function.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "public_common.js.",
+			"answer": "Every COS page includes public_common.js in the footer of the template. This file renders as part of standard_footer_includes and cannot be removed. This Javascript file is used by many of the features of the app, as well as website features such as HubSpot's slider module.",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "HubSpot Tracking Code.",
+			"answer": "The HubSpot tracking code is automatically added to any HubSpot template. It is included with the standard_footer_includes HubL variable. The tracking code loads a analytics Javascript file names your HubID.js (example 158015.js).",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Template layouts and coded files.",
+			"answer": "Template layouts can either be responsive or basic. By default they are responsive, but you can convert them to basic templates, by selecting Actions > Make basic. In terms of customizing layouts, designers have access to customizing certain default colors and fonts (Content Settings > Colors and Fonts) and adding inline CSS to modules (Module gear icon > Edit CSS). You can always access the markup of a template layout by cloning to file (Actions > Clone to file). Coded templates allow you to completely customize the email markup, as long as you include the variables below. ",
+			"category": "unknown"
+		},
+
+		{
+			"question": "hs-inline-css and data-hse-inline-css.",
+			"answer": "One challenging aspect of coding email templates that render correctly, across all clients, is the lack of support for CSS added in a <style> within the <head>. For example, Gmail's desktop web app disregards information in the <head> all together. To make coding email templates easier, HubSpot coded email templates support a special style tag that gives designers the ability to write CSS that will be compiled and converted into inline CSS and will be added to the targeted elements. Any code added to a style tag with the ID of <hs-inline-css>, will be added to the targeted tags. For example, Microsoft Outlook will apply a default font-family to all text contained in <td> tags, unless you specify a font-family inline for that table column. The example below uses a <hs-inline-css> style tag to add a font-family to all the table columns in the template. Please note that any media queries should be included in a separate <style>, as they can not be made inline. NOTE: The data-hse-inline-css attribute on a <style> tag in the Edit > Edit Head section of drag and drop template in place of hs-inline-css to achieve this same goal. In coded files, either method may be used (as long as there is only one style#hs-inline-css per template.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Responsive email template.",
+			"answer": "HubSpot's default email template layout uses the markup below. These responsive layouts include media queries that make the images and tables responsive. The responsive layouts use color and font variables that connect to Content Settings > Color and Fonts. When working with HubSpot's responsive layout, any <td> with the class attribute of that includes the text <column> will be made responsive.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Basic email template.",
+			"answer": "Basic HubSpot template layouts use different markup and do not include the media queries that make the email responisve. The basic layouts also use color and font variables that connect to Content Settings > Color and Fonts.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Starting from scratch.",
+			"answer": "When you start from scratch by creating a .html email in Design Manager, HubSpot will automatically generate the markup below.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Form markup explained.",
+			"answer": "HubSpot's form editor provides an easy to use UI that ultimately outputs the markup of a single, two, or three-column form. It is important to remember that the markup gets generated, based upon the form that you create in HubSpot. Label tags, placeholder attributes, help text, columns, and initial field values should all be controlled from within HubSpot's Form editor (Contacts > Forms). The embed code generates a form tag and a div wrapper with an action attribute that submits to HubSpot via the Forms API submission endpoint. Each row of inputs is wrapped in a fieldset tag. Within the fieldset tags, there are React JS div tags that are used for progressive profiling and dependent form fields. Most fields render with label and input tags with help text in a div. Dropdown select fields have select and option tags, while other multi-select fields render their options with ul and li tags. You can learn more about the CSS selectors, below. Each input has a type attribute that indicates the type of field, in addition to an unique ID attribute. Validation error messages render within a within a ul, li, and label tag. At the end of the form, there is a hidden field named hs_context that collects contextual information (such as the user's user token cookie: hubspot_utk) in a JSON block, passes it as part of the submission. HubSpot generates this information automatically. Below is the example output of the depicted form with each of the standard HubSpot contact properties. ",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Styling forms.",
+			"answer": "You can style HubSpot forms by targeting fields with standard attribute selectors. Below is a list of these and other commonly used selectors. The selectors are nested within the class=hs-form  form tag element for the sake of specificity to only style HubSpot forms. If you want to style all forms, you can replace .hs-form with <body> or remove the nesting all together. For additional selectors, check out the HubSpot Boilerplate CSS file. ",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Modifying the form embed code.",
+			"answer": "In addition to styling the form, you can also modify the embed code to affect the markup and the behavior. For more on modifying the embed code Javascript, check out this article. ",
+			"category": "hubspot"
+		},
+
+		{
+			"question": "Forms API.",
+			"answer": "If you want complete control over your markup, you can write your own markup and use HubSpot's Forms API to submit contact data into HubSpot.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Targeted GDPR Text in Forms.",
+			"answer": "If you want to style text in forms related to GDPR, you can simply use the CSS below as a starting point. Depending on the consent options your team has chosen this may need to be modified.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Menu markup explained.",
+			"answer": "Like every other module in HubSpot, menu modules are wrapped in module wrapper markup. These div and span tags make the module editable via the content editor UI and include classes for the module type as well as Template Builder's responsive grid. The menu markup of simple and advanced menu modules is the same, with the exception of some of the classes applied to wrapper and menu div. The actual menu renders as an ul wrapped in a class=hs-menu-wrapper div. The hs-menu-wrapper div has additional classes based upon the advanced menu modules settings. Within the ul each menu item is an a tag wrapped in a li. The li tag has a class that indicates the depth of the item in the menu tree (ex. hs-menu-depth-1).  If the li item contains a nested child menu, it will have the additional class of hs-item-has-children. The child menu renders as a nested ul with the class hs-menu-children-wrapper. When you visit a page that is included in your menu tree, the class active-branch is added to the parent li items and a class of active is added to that page's particular li item. Below is the markup of the advanced menu tree depicted here.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Classes added by settings.",
+			"answer": "Advanced menu module settings control what markup gets rendered by HubSpot and add classes that be used to style certain menu features. The Advanced menu type and the Max levels settings control what parts of the menu tree render in the menu markup. Additionally, the Menu control selects which advanced menu to use. The Orientation setting adds a class hs-menu-flow-horizontal or hs-menu-flow-vertical to the menu wrapper div. This class can be used in CSS selectors to style horizontal and vertical menus differently. The Enable Flyouts? setting adds the class of flyouts or no-flyouts to the menu wrapper div. This class can be used in CSS selectors to target menus with or without dropdowns to hide them based upon this setting.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Mobile menus.",
+			"answer": "While menus can be made <mobile-friendly> using purely CSS, creating dynamic mobile menus that support multiple levels of navigation requires the use of Javascript. This tutorial describes the implementation of such a mobile menu.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Get started with the design manager.",
+			"answer": "HubSpot's design manager combines all the tools that designers need to build beautiful and responsive websites, while still giving marketers flexibility to create and edit content in an intuitive interface.  This guide provides a list of resources to get started with the design manager. For design inspiration, find customer examples on the Academy blog and our Designers Forum.  Web developers can see Designers Documentation for reference, or check out the CMS Discovery Kit to get started with custom development. Make sure that all links and form inputs have descriptive text. If using an icon, provide screen reader text.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Making your content accessible.",
+			"answer": "As websites continue to become more and more critical to businesses, ensuring that content on websites is accessible to all visitors has become more vital than ever. In the United States, this is often called section 508 compliance, which refers to the section of the Reauthorized Rehabilitation Act of 1998 that requires federal agencies to make electronic and information technology accessible to people with disabilities. While section 508 compliance is a good baseline, increasingly the Web Content Accessibility Guidelines (WCAG) 2.0 are being used as the standard for creating accessible content on the web. HubSpot is committed to making sure that we have provided the necessary tools to help you make your content accessible. While not a definitive guide, here are some steps that you can take to make your content accessible.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Provide text alternatives for any non-text content.",
+			"answer": "All images, icons, videos, and buttons should have a text alternative. Not only is this good for visitors that are consuming your content via a screen reader, it is also great for search engines. The alternative text should describe the content of the image. For videos, use a service that supports captions and consider including a transcript. Some services that support uploading transcripts include Youtube, Vimeo, and Wistia.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Adding a skip to content link.",
+			"answer": "When a visitor is navigating using a screen reader, it is super helpful if there is a way to skip over the portions of the page that are repeated. We can do this by adding a link that points to the main content of the page. Adding an id can be done via CSS Declarations (Gear Icon > Edit CSS).",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Use semantic markup.",
+			"answer": "Use links (<a />) or buttons for all clickable controls. Use <th> in tables for column and row headings and <thead>, <tbody>, and <tfoot> to denote sections.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Keyboard navigation.",
+			"answer": "Some visitors must use the keyboard or some sort of assistive device that emulates a keyboard to navigate websites. Make sure that ':focus' is styled so that when a user is navigating via the keyboard they can see what is focused. When hiding/showing portions of the page with ':hover' or via Javascript, make sure that users are also able to navigate those controls via Javascript or that there is alternative path to the information.",
+			"category": "unknown"
+		},
+
+		{
+			"question": "Email doesnt refresh and keep the error <Email must be formatted correctly> and I noticed this error happens also on your own template page.",
+			"answer": "Please give us access to your account, and our developers will take care of this issue. We need to have permission to write and publish as a Marketing Administrator. Our HubSpot account details: s.materzynski@clickray.pl Let us know when you are done and write us your domain name so we can find you on our account in HubSpot.",
+			"category": "clickray"
+		},
+
+		
+		{
+			"question": "How to Add a Google Map and Styled Map Marker to template.",
+			"answer": "The following link should help: http://marketing.clickray.eu/blog/video-tutorial-how-to-add-a-google-map-and-styled-map-marker-to-turbo-templates .",
+			"category": "clickray"
+
+		},
+
+		{
+			"question": "Info about: turbo sodium, template, templates, customization, blog, blog site, blog template, video, video tutorial.",
+			"answer": "The following link should help: http://marketing.clickray.eu/blog/turbo-sodium-blog-site-2-customization-video-tutorial .",
+			"category": "clickray"
+		},
+
+		{
+			"question": "Where are the templates we have purchased, where can I find the purchased templates, I can not find the purchased templates.",
+			"answer": "The following link should help: http://marketing.clickray.eu/blog/how-to-locate-turbo-sodium-templates-after-purchasing",
+			"category": "clickray"
+		}
+	]
+}
