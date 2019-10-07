@@ -111,7 +111,7 @@
 		{
 			"tag": "hs_default_custom_style.css.",
 			"question": "",
-			"answer": "Also know as Primary CSS, this file is a global CSS file that is included in all of template layouts by default. This file is analogous to style.css in Wordpress themes. You can disable it in Content Settings or within the Edit > Edit Head feature of Template Builder. If you would like to include it in a coded template, you must use the include_default_custom css function.",
+			"answer": "Also know as Primary CSS, this file is a global CSS file that is included in all of template layouts by default. This file is analogous to style.css in Wordpress themes. You can disable it in Content Settings or within the Edit &gt; Edit Head feature of Template Builder. If you would like to include it in a coded template, you must use the include_default_custom css function.",
 			"category": "HubSpot responsive grid",
 			"module_template": "",
 			"src_1": "",
@@ -150,7 +150,7 @@
 		{
 			"tag": "Template layouts and coded files.",
 			"question": "",
-			"answer": "Template layouts can either be responsive or basic. By default they are responsive, but you can convert them to basic templates, by selecting Actions > Make basic. In terms of customizing layouts, designers have access to customizing certain default colors and fonts (Content Settings > Colors and Fonts) and adding inline CSS to modules (Module gear icon > Edit CSS). You can always access the markup of a template layout by cloning to file (Actions > Clone to file). Coded templates allow you to completely customize the email markup, as long as you include the variables below.",
+			"answer": "Template layouts can either be responsive or basic. By default they are responsive, but you can convert them to basic templates, by selecting Actions &gt; Make basic. In terms of customizing layouts, designers have access to customizing certain default colors and fonts (Content Settings &gt; Colors and Fonts) and adding inline CSS to modules (Module gear icon &gt; Edit CSS). You can always access the markup of a template layout by cloning to file (Actions &gt; Clone to file). Coded templates allow you to completely customize the email markup, as long as you include the variables below.",
 			"category": "HubSpot responsive grid",
 			"module_template": "",
 			"src_1": "",
@@ -163,7 +163,7 @@
 		{
 			"tag": "hs-inline-css and data-hse-inline-css.",
 			"question": "",
-			"answer": "One challenging aspect of coding email templates that render correctly, across all clients, is the lack of support for CSS added in a <style> within the <head>. For example, Gmail's desktop web app disregards information in the <head> all together. To make coding email templates easier, HubSpot coded email templates support a special style tag that gives designers the ability to write CSS that will be compiled and converted into inline CSS and will be added to the targeted elements. Any code added to a style tag with the ID of <hs-inline-css>, will be added to the targeted tags. For example, Microsoft Outlook will apply a default font-family to all text contained in <td> tags, unless you specify a font-family inline for that table column. The example below uses a <hs-inline-css> style tag to add a font-family to all the table columns in the template. Please note that any media queries should be included in a separate <style>, as they can not be made inline. NOTE: The data-hse-inline-css attribute on a <style> tag in the Edit > Edit Head section of drag and drop template in place of hs-inline-css to achieve this same goal. In coded files, either method may be used (as long as there is only one style#hs-inline-css per template.",
+			"answer": "One challenging aspect of coding email templates that render correctly, across all clients, is the lack of support for CSS added in a &lt;style&gt; within the &lt;head&gt;. For example, Gmail's desktop web app disregards information in the &lt;head&gt; all together. To make coding email templates easier, HubSpot coded email templates support a special style tag that gives designers the ability to write CSS that will be compiled and converted into inline CSS and will be added to the targeted elements. Any code added to a style tag with the ID of &lt;hs-inline-css&gt;, will be added to the targeted tags. For example, Microsoft Outlook will apply a default font-family to all text contained in &lt;td&gt; tags, unless you specify a font-family inline for that table column. The example below uses a &lt;hs-inline-css&gt; style tag to add a font-family to all the table columns in the template. Please note that any media queries should be included in a separate &lt;style&gt;, as they can not be made inline. NOTE: The data-hse-inline-css attribute on a &lt;style&gt; tag in the Edit &gt; Edit Head section of drag and drop template in place of hs-inline-css to achieve this same goal. In coded files, either method may be used (as long as there is only one style#hs-inline-css per template.",
 			"category": "Email templates",
 			"module_template": "",
 			"src_1": "",
@@ -176,7 +176,7 @@
 		{
 			"tag": "Responsive email template.",
 			"question": "",
-			"answer": "HubSpot's default email template layout uses the markup below. These responsive layouts include media queries that make the images and tables responsive. The responsive layouts use color and font variables that connect to Content Settings > Color and Fonts. When working with HubSpot's responsive layout, any <td> with the class attribute of that includes the text <column> will be made responsive.",
+			"answer": "HubSpot's default email template layout uses the markup below. These responsive layouts include media queries that make the images and tables responsive. The responsive layouts use color and font variables that connect to Content Settings &gt; Color and Fonts. When working with HubSpot's responsive layout, any &lt;td&gt; with the class attribute of that includes the text &lt;column&gt; will be made responsive.",
 			"category": "Email templates",
 			"module_template": "",
 			"src_1": "",
@@ -189,7 +189,7 @@
 		{
 			"tag": "Basic email template.",
 			"question": "",
-			"answer": "Basic HubSpot template layouts use different markup and do not include the media queries that make the email responisve. The basic layouts also use color and font variables that connect to Content Settings > Color and Fonts.",
+			"answer": "Basic HubSpot template layouts use different markup and do not include the media queries that make the email responisve. The basic layouts also use color and font variables that connect to Content Settings &gt; Color and Fonts.",
 			"category": "Email templates",
 			"module_template": "",
 			"src_1": "",
@@ -215,7 +215,7 @@
 		{
 			"tag": "Form markup explained.",
 			"question": "",
-			"answer": "HubSpot's form editor provides an easy to use UI that ultimately outputs the markup of a single, two, or three-column form. It is important to remember that the markup gets generated, based upon the form that you create in HubSpot. Label tags, placeholder attributes, help text, columns, and initial field values should all be controlled from within HubSpot's Form editor (Contacts > Forms). The embed code generates a form tag and a div wrapper with an action attribute that submits to HubSpot via the Forms API submission endpoint. Each row of inputs is wrapped in a fieldset tag. Within the fieldset tags, there are React JS div tags that are used for progressive profiling and dependent form fields. Most fields render with label and input tags with help text in a div. Dropdown select fields have select and option tags, while other multi-select fields render their options with ul and li tags. You can learn more about the CSS selectors, below. Each input has a type attribute that indicates the type of field, in addition to an unique ID attribute. Validation error messages render within a within a ul, li, and label tag. At the end of the form, there is a hidden field named hs_context that collects contextual information (such as the user's user token cookie: hubspot_utk) in a JSON block, passes it as part of the submission. HubSpot generates this information automatically. Below is the example output of the depicted form with each of the standard HubSpot contact properties.",
+			"answer": "HubSpot's form editor provides an easy to use UI that ultimately outputs the markup of a single, two, or three-column form. It is important to remember that the markup gets generated, based upon the form that you create in HubSpot. Label tags, placeholder attributes, help text, columns, and initial field values should all be controlled from within HubSpot's Form editor (Contacts &gt; Forms). The embed code generates a form tag and a div wrapper with an action attribute that submits to HubSpot via the Forms API submission endpoint. Each row of inputs is wrapped in a fieldset tag. Within the fieldset tags, there are React JS div tags that are used for progressive profiling and dependent form fields. Most fields render with label and input tags with help text in a div. Dropdown select fields have select and option tags, while other multi-select fields render their options with ul and li tags. You can learn more about the CSS selectors, below. Each input has a type attribute that indicates the type of field, in addition to an unique ID attribute. Validation error messages render within a within a ul, li, and label tag. At the end of the form, there is a hidden field named hs_context that collects contextual information (such as the user's user token cookie: hubspot_utk) in a JSON block, passes it as part of the submission. HubSpot generates this information automatically. Below is the example output of the depicted form with each of the standard HubSpot contact properties.",
 			"category": "Forms",
 			"module_template": "",
 			"src_1": "",
@@ -228,7 +228,7 @@
 		{
 			"tag": "Styling forms.",
 			"question": "",
-			"answer": "You can style HubSpot forms by targeting fields with standard attribute selectors. Below is a list of these and other commonly used selectors. The selectors are nested within the class=hs-form  form tag element for the sake of specificity to only style HubSpot forms. If you want to style all forms, you can replace .hs-form with <body> or remove the nesting all together. For additional selectors, check out the HubSpot Boilerplate CSS file.",
+			"answer": "You can style HubSpot forms by targeting fields with standard attribute selectors. Below is a list of these and other commonly used selectors. The selectors are nested within the class=hs-form  form tag element for the sake of specificity to only style HubSpot forms. If you want to style all forms, you can replace .hs-form with &lt;body&gt; or remove the nesting all together. For additional selectors, check out the HubSpot Boilerplate CSS file.",
 			"category": "Forms",
 			"module_template": "",
 			"src_1": "",
@@ -293,7 +293,7 @@
 		{
 			"tag": "Mobile menus.",
 			"question": "",
-			"answer": "While menus can be made <mobile-friendly> using purely CSS, creating dynamic mobile menus that support multiple levels of navigation requires the use of Javascript. This tutorial describes the implementation of such a mobile menu.",
+			"answer": "While menus can be made &lt;mobile-friendly&gt; using purely CSS, creating dynamic mobile menus that support multiple levels of navigation requires the use of Javascript. This tutorial describes the implementation of such a mobile menu.",
 			"category": "Cross-browser compability",
 			"module_template": "",
 			"src_1": "",
@@ -345,7 +345,7 @@
 		{
 			"tag": "Adding a skip to content link.",
 			"question": "",
-			"answer": "When a visitor is navigating using a screen reader, it is super helpful if there is a way to skip over the portions of the page that are repeated. We can do this by adding a link that points to the main content of the page. Adding an id can be done via CSS Declarations (Gear Icon > Edit CSS).",
+			"answer": "When a visitor is navigating using a screen reader, it is super helpful if there is a way to skip over the portions of the page that are repeated. We can do this by adding a link that points to the main content of the page. Adding an id can be done via CSS Declarations (Gear Icon &gt; Edit CSS).",
 			"category": "Web accessibility",
 			"module_template": "",
 			"src_1": "",
@@ -358,7 +358,7 @@
 		{
 			"tag": "Use semantic markup.",
 			"question": "",
-			"answer": "Use links (<a />) or buttons for all clickable controls. Use <th> in tables for column and row headings and <thead>, <tbody>, and <tfoot> to denote sections.",
+			"answer": "Use links (&lt;a /&gt;) or buttons for all clickable controls. Use &lt;th&gt; in tables for column and row headings and &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; to denote sections.",
 			"category": "SEO",
 			"module_template": "",
 			"src_1": "",
@@ -382,8 +382,8 @@
 		},
 
 		{
-			"tag": "Why email doesnt refresh and keep the error <Email must be formatted correctly>.",
-			"question": "Email doesnt refresh and keep the error <Email must be formatted correctly> and I noticed this error happens also on your own template page.",
+			"tag": "Why email doesnt refresh and keep the error &lt;Email must be formatted correctly&gt;.",
+			"question": "Email doesnt refresh and keep the error &lt;Email must be formatted correctly&gt; and I noticed this error happens also on your own template page.",
 			"answer": "Please give us access to your account, and our developers will take care of this issue. We need to have permission to write and publish as a Marketing Administrator. Our HubSpot account details: s.materzynski@clickray.pl Let us know when you are done and write us your domain name so we can find you on our account in HubSpot.",
 			"category": "Email templates",
 			"module_template": "",
@@ -450,7 +450,7 @@
 
 		{
 			"tag": "Why the style gets broken if the module was changed from flexible to statistic?",
-			"question": "In the options editor show this message: <You’ll need to convert the items below into static groups or local copies before you can turn on this option> We change the module from flexible to static, but the styles get broken.",
+			"question": "In the options editor show this message: &lt;You’ll need to convert the items below into static groups or local copies before you can turn on this option&gt; We change the module from flexible to static, but the styles get broken.",
 			"answer": "There are CSS styles attached to all templates in X3media, which causing errors in layouts. We are not responsible for styles that are set globally in account settings, so you must resolve it by your own. Removing all these styles will make our template look like in our demo. In attachment, you can see where the problematic CSS styles may be found.",
 			"category": "HubSpot responsive grid",
 			"module_template": "Turbo Nickel",
@@ -517,7 +517,7 @@
 		{
 			"tag": "The header image ONLY for the blog.",
 			"question": "I changed over our old blog to your new NICKEL template but the header image ONLY for the blog (on landing page it's fine).",
-			"answer": "The image in the blog header is being pulled from File Manager, but it is not displaying in the header itself. This is the HubDB module that is responsible for this (link below). On the first line of the source code, there is the <background-image:url(> class that is for some reason has misspelling or issues to pull the picture itself in. If you contact template support on hello@clickray.eu<mailto:hello@clickray.eu> and explain that once the template is used, the image is not displaying in Chrome due to module not being properly structured. Below are some resources you may find interesting as alternatives if needed.",
+			"answer": "The image in the blog header is being pulled from File Manager, but it is not displaying in the header itself. This is the HubDB module that is responsible for this (link below). On the first line of the source code, there is the &lt;background-image:url(&gt; class that is for some reason has misspelling or issues to pull the picture itself in. If you contact template support on hello@clickray.eu&lt;mailto:hello@clickray.eu&gt; and explain that once the template is used, the image is not displaying in Chrome due to module not being properly structured. Below are some resources you may find interesting as alternatives if needed.",
 			"category": "Blog templates",
 			"module_template": "Turbo Nickel",
 			"src_1": "",
@@ -607,7 +607,7 @@
 
 		{
 			"tag": "How can I change the syllabication system or norms of quantity of marks for rows in the mobile view of my Turbo Potassium template?",
-			"question": "There are some features which do not perform that well on mobile view - text layout: In blog posts the text goes <over the edge> of the view or then long words are put on next row , some syllabication system / norm for row change would be great.",
+			"question": "There are some features which do not perform that well on mobile view - text layout: In blog posts the text goes &lt;over the edge&gt; of the view or then long words are put on next row , some syllabication system / norm for row change would be great.",
 			"answer": "Think about our 1h package of free maintenance. What can be updated within this service: 1. Reduce a bit font-size for mobile in blog templates. 2. Add syllabication. 3. Reduce left space of lists (bullets) in mobile, because we found nested lists cause some problems and in result, this is why text goes over the edge. 4. Optional - add a transparent dark mask to featured images in listing, so white elements will be better visible.",
 			"category": "Templates customization",
 			"module_template": "Turbo Potassium",
@@ -726,7 +726,7 @@
 		{
 			"tag": "What is the ideal size of an image?",
 			"question": "Is there a resource that says what the ideal total pixel size/ dimensions of the image should be for all the pictures used in headers, etc.?",
-			"answer": "The ideal image size does not exist, because images on each screen will look different. Standard header images size is 1920px width. We recommend using image format <.jpg> and use programs to compress images like https://tinypng.com/ (compress.mov).",
+			"answer": "The ideal image size does not exist, because images on each screen will look different. Standard header images size is 1920px width. We recommend using image format &lt;.jpg&gt; and use programs to compress images like https://tinypng.com/ (compress.mov).",
 			"category": "Templates",
 			"module_template": "Turbo Vanadyl",
 			"src_1": "",
@@ -739,7 +739,7 @@
 		{
 			"tag": "How to check the templates responsiveness?",
 			"question": "Does a template exist that would show us where the active area and dead space(s) are (with regard to the responsive nature of the template and how that affects what areas of the header image are visible depending what device you’re using to view the site)?",
-			"answer": "To check responsive of the template, the best method is to use <source> e.g. in Chrome: (video.mov) or test it on real devices.",
+			"answer": "To check responsive of the template, the best method is to use &lt;source&gt; e.g. in Chrome: (video.mov) or test it on real devices.",
 			"category": "Templates",
 			"module_template": "Turbo Vanadyl",
 			"src_1": "",
@@ -752,7 +752,7 @@
 		{
 			"tag": "The image in the main banner does not show, what can I do?",
 			"question": "We have recently purchased named ni-301-Blog 1 sidebar and seem to be experiencing some issues getting the image in the main banner to show. In the raw template before any edits, the main banner shows the blog title and a gray background in the preview as well as the live test. The default stock image does not appear and any other images we have tried do not appear in the banner as well. Can you provide some insight as to the reason why this may be occurring? The issue seems to be within the code in the ni-hero-banner-blog module. This output is giving me no background image.",
-			"answer": "There are 3 options to resolve this issue. 1. You may follow the instructions from the <video.mov> (link 1), 2. Paste the code from file <code.rtf> (this is file with whole code to banner) or <code 2.rtf> (this is file only with changed code) to <ni-hero-banner-blog> (picture 1 and 2). 3. Send us your password and login to HubSpot and we will check this for you.",
+			"answer": "There are 3 options to resolve this issue: 1. You may follow the instructions from the &lt;video.mov&gt; (link 1), 2. Paste the code from file &lt;code.rtf&gt; (this is file with whole code to banner) or &lt;code 2.rtf&gt; (this is file only with changed code) to &lt;ni-hero-banner-blog&gt; (picture 1 and 2). 3. Send us your password and login to HubSpot and we will check this for you.",
 			"category": "Custom modules",
 			"module_template": "Turbo Nickel",
 			"src_1": "",
@@ -778,7 +778,7 @@
 		{
 			"tag": "How can I change the menu to link over the new pages I purchased?",
 			"question": "How can I change the menu to link over the new pages I purchased?",
-			"answer": "You should go to: Settings -> Website -> Navigation. Please look at screenshots attached.",
+			"answer": "You should go to: Settings -&gt; Website -&gt; Navigation. Please look at screenshots attached.",
 			"category": "HubSpot modules",
 			"module_template": "Turbo Vanadyl",
 			"src_1": "",
@@ -828,8 +828,8 @@
 		},
 
 		{
-			"tag": "How can I edit modules when I am creating an article on the blog <Resources> with the template <va-303-Resources 1>?",
-			"question": "I can not edit the modules when I create an article on the blog <Resources> with the template <va-303-Resources 1>.",
+			"tag": "How can I edit modules when I am creating an article on the blog &lt;Resources&gt; with the template &lt;va-303-Resources 1&gt;?",
+			"question": "I can not edit the modules when I create an article on the blog &lt;Resources&gt; with the template &lt;va-303-Resources 1&gt;.",
 			"answer": "These modules are pulled out from the blog feeds. Check similar example on our video. This should help you:",
 			"category": "Blog templates",
 			"module_template": "Turbo Vanadyl",
@@ -867,7 +867,7 @@
 		},
 
 		{
-			"tag": "The header module from your template causes the HubSpot forms <reset button> and sometimes <submit> button to not function.",
+			"tag": "The header module from your template causes the HubSpot forms &lt;reset button&gt; and sometimes &lt;submit&gt; button to not function.",
 			"question": "We have identified that the header module from your template causes the HubSpot form's 'reset button' to not function. In some cases even the 'submit' button did not work. The form works properly if either the 'me - header config' or 'me - multi header module' is removed.",
 			"answer": "We checked this bug. It results from the addition of the JS code by you. Please see attachment and remove this additional code and check the form's operation.",
 			"category": "JavaScript",
@@ -896,7 +896,7 @@
 		{
 			"tag": "Does it matter in which folder I put images correlated with the logo in the navigation bar?",
 			"question": "Does it matter which folder I put the two images in? Or place that I have to have the folder located in?",
-			"answer": "Yes, it does it matter where the logo is located. I send you attachment how should look your path. In files, in the main folder(Home) you should have or create: HubSpot_Template_Marketplace -> Turbo Mercuric -> Logo . In logo catalog, you should have two pictures names exactly like on the screenshot.",
+			"answer": "Yes, it does it matter where the logo is located. I send you attachment how should look your path. In files, in the main folder(Home) you should have or create: HubSpot_Template_Marketplace -&gt; Turbo Mercuric -&gt; Logo . In logo catalog, you should have two pictures names exactly like on the screenshot.",
 			"category": "Templates",
 			"module_template": "Turbo Mercuric",
 			"src_1": "https://bcx-production-attachments-us-west-2.s3-us-west-2.amazonaws.com/95066336-61c4-11e9-a92f-1ac278f02ccd?AWSAccessKeyId=AKIAIXJK7HJ33HYQWMEQ&Expires=1562233475&Signature=U92ddCnGYVpJQtY6z%2FbW1hacf5o%3D&response-content-disposition=inline%3B%20filename%3D%22Screenshot%202019-04-18%20at%2012.23.10.png%22%3B%20filename%2A%3DUTF-8%27%27Screenshot%25202019-04-18%2520at%252012.23.10.png&response-content-type=image%2Fpng",
@@ -921,7 +921,7 @@
 
 		{
 			"tag": "Why my URL is redirecting to an old version of the template?",
-			"question": "For some reason, our URL is redirecting to an extremely old version of the template. We have reached out to Hubspot Support and the only thing they were able to tell us is that <It seems that a custom change made to this template has reverted it back to its original state> which is odd given that the original state of the template doesn't include this lorem ipsum. We are reaching out to see if you have had any troubles with the recent Hubspot outages and if our templates are fixable.",
+			"question": "For some reason, our URL is redirecting to an extremely old version of the template. We have reached out to Hubspot Support and the only thing they were able to tell us is that &lt;It seems that a custom change made to this template has reverted it back to its original state&gt; which is odd given that the original state of the template doesn't include this lorem ipsum. We are reaching out to see if you have had any troubles with the recent Hubspot outages and if our templates are fixable.",
 			"answer": "Our developers have investigated this problem. It is not related to the error in our template. This is an internal HubSpot issue or it comes from changes made by you.",
 			"category": "Templates",
 			"module_template": "Turbo Vanadyl",
@@ -934,7 +934,7 @@
 
 		{
 			"tag": "Why typing in an email address in an email field in a form doesnt work, whereas copy - paste method works?",
-			"question": "It seems there is an issue while typing an email in an email field in a form, it doesn't refresh and keep the error <Email must be formatted correctly.> unless we copy paste a valid email address without typing it. I noticed this error happens also on your own Potassium template page.",
+			"question": "It seems there is an issue while typing an email in an email field in a form, it doesn't refresh and keep the error &lt;Email must be formatted correctly.&gt; unless we copy paste a valid email address without typing it. I noticed this error happens also on your own Potassium template page.",
 			"answer": "Please give us access to your account, and our developers will take care of this issue. We need to have permission to write and publish as a Marketing Administrator. Our HubSpot account details: s.materzynski@clickray.pl . Let us know when you are done and write us your domain name, so we can find you on our account in HubSpot.",
 			"category": "Forms",
 			"module_template": "Turbo Potassium",
@@ -1013,7 +1013,7 @@
 		{
 			"tag": "Where can I manage the spaces between the email field and subscription option bullet?",
 			"question": "When I select which form I want to have displayed. The email line runs into the subscribe option bullets. where would I be able to input some space between these.",
-			"answer": "This module is only adapted to one field - email. Inputs with a subscription can be used but as <hidden>.",
+			"answer": "This module is only adapted to one field - email. Inputs with a subscription can be used but as &lt;hidden&gt;.",
 			"category": "Templates customization",
 			"module_template": "Turbo Mercuric",
 			"src_1": "",
@@ -1195,7 +1195,7 @@
 		{
 			"tag": "Why a blue rectangle appears next to the search icon in the navigation menu only on certain pages?",
 			"question": "We are having an issue where a blue rectangle appears next to the search icon in the navigation menu, but it only appears on certain pages. This is odd because we use the same nav-menu for all the main pages of the site.",
-			"answer": "The problem is in your CSS file - <Agilence-style>.",
+			"answer": "The problem is in your CSS file - &lt;Agilence-style&gt;.",
 			"category": "CSS",
 			"module_template": "Turbo Sodium",
 			"src_1": "",
@@ -1206,8 +1206,8 @@
 		},
 
 		{
-			"tag": "How can I create an <all> resource category?",
-			"question": "I am having difficulty creating an “all” resource category module as seen in the live example for the template <Sodium v2 Resources Page 1>.",
+			"tag": "How can I create an &lt;all&gt; resource category?",
+			"question": "I am having difficulty creating an “all” resource category module as seen in the live example for the template &lt;Sodium v2 Resources Page 1&gt;.",
 			"answer": "The link below should help:",
 			"category": "Custom modules",
 			"module_template": "Turbo Sodium v2",
@@ -1258,8 +1258,8 @@
 		},
 
 		{
-			"tag": "Is this a CSS issue that the <image alignment> section is not showing up?",
-			"question": "When writing a new blog post, I insert an image, click the image, select options>style and the <image alignment> section isn't showing up? It started after we changed our blog template. Is this an issue with the CSS?",
+			"tag": "Is this a CSS issue that the &lt;image alignment&gt; section is not showing up?",
+			"question": "When writing a new blog post, I insert an image, click the image, select options&gt;style and the &lt;image alignment&gt; section isn't showing up? It started after we changed our blog template. Is this an issue with the CSS?",
 			"answer": "If you have not changed anything in CSS then no. This is probably a HubSpot error.",
 			"category": "CSS",
 			"module_template": "Turbo Sodium v2",
@@ -1312,7 +1312,7 @@
 		{
 			"tag": "Where can I find the link to the Font Awesome stylesheet in the coded files of the template?",
 			"question": "I've been trying to replace some of the Font Awesome icons in the template and have noticed that some of the icons in the latest version of Font Awesome do not seem to be supported in the Sodium template. What version of Font Awesome does this template use? And where can I find the link to the Font Awesome stylesheet in the coded files of the template?",
-			"answer": "The awesome font and other CSS libraries can be found in the global group <Header (white) Group>, in the first module - <CSS (Custom HTML)>. 4.7 version of FontAwesome is connected there with JS.",
+			"answer": "The awesome font and other CSS libraries can be found in the global group &lt;Header (white) Group&gt;, in the first module - &lt;CSS (Custom HTML)&gt;. 4.7 version of FontAwesome is connected there with JS.",
 			"category": "CSS",
 			"module_template": "Turbo Sodium v2.11",
 			"src_1": "",
@@ -1469,7 +1469,7 @@
 		{
 			"tag": "How can I edit en email template?",
 			"question": "I am struggling to edit the template for the email - it's only in the code.",
-			"answer": "Please, right-click on the template name and then <create email>. At this level, it will be easier to edit.",
+			"answer": "Please, right-click on the template name and then &lt;create email&gt;. At this level, it will be easier to edit.",
 			"category": "Email templates",
 			"module_template": "Turbo Sodium",
 			"src_1": "",
@@ -1508,7 +1508,7 @@
 		{
 			"tag": "How to I put my logo on my template?",
 			"question": "How to I put my logo on my template?",
-			"answer": "Please go to Content -> Content Settings. On the left sidebar, you will see the <Page Publishing> option. In the Logo section click on <Select Image>. Upload a new file from your documents. Check the screen below:",
+			"answer": "Please go to Content -&gt; Content Settings. On the left sidebar, you will see the &lt;Page Publishing&gt; option. In the Logo section click on &lt;Select Image&gt;. Upload a new file from your documents. Check the screen below:",
 			"category": "HubSpot modules",
 			"module_template": "Turbo Sodium",
 			"src_1": "https://bcx-production-attachments-us-west-2.s3-us-west-2.amazonaws.com/5aa524ea-3a9e-11e9-8050-de2731bf02c2?AWSAccessKeyId=AKIAIXJK7HJ33HYQWMEQ&Expires=1562251168&Signature=ToFliUmYF3RSmnOODwLutnPHAc4%3D&response-content-disposition=inline%3B%20filename%3D%22Zrzut%20ekranu%202019-02-27%20o%2015.45.12.png%22%3B%20filename%2A%3DUTF-8%27%27Zrzut%2520ekranu%25202019-02-27%2520o%252015.45.12.png&response-content-type=image%2Fpng",
@@ -1521,7 +1521,7 @@
 		{
 			"tag": "Where to load or reference the icons on the top left of each post in Turbo Sodium Blog v2 multi?",
 			"question": "We cannot figure out where to load or reference the icons on the top left of each post?. Can you please tell us where that code is or is it in the CSS?",
-			"answer": "First, you have to configure filters in Design Manager. In your blog template - Sodium v2 Blog Site 2 (listing) - locate the module named <Sodium v2 - blog filters>. Set Tag field and Tag icon unicode (there are instructions in the help tooltip). Then you have to assign topics to your posts. The first topic of the post will be connected to one of the Tags you have configured in the previous step.",
+			"answer": "First, you have to configure filters in Design Manager. In your blog template - Sodium v2 Blog Site 2 (listing) - locate the module named &lt;Sodium v2 - blog filters&gt;. Set Tag field and Tag icon unicode (there are instructions in the help tooltip). Then you have to assign topics to your posts. The first topic of the post will be connected to one of the Tags you have configured in the previous step.",
 			"category": "Custom modules",
 			"module_template": "Turbo Sodium",
 			"src_1": "",
@@ -1547,7 +1547,7 @@
 
 		{
 			"tag": "I just bought the Turbo Vanadyl pack and found out that a few webpages are missing, what should I do?",
-			"question": "I just bought the web page package to redesign the agency's website under HubSpot, and I'm surprised to find missing web pages. There are two system pages missing <Password prompt page> and <Search results page> are not in the package, and yet they are essential. Is it possible to have these pages in order to have a complete website. I saw written that there were <3 blog pages> on the detail of the pages included in the package on the Marketplace, apart from there is only 1 blog page, is it possible to have the 2 blog pages missing please?",
+			"question": "I just bought the web page package to redesign the agency's website under HubSpot, and I'm surprised to find missing web pages. There are two system pages missing &lt;Password prompt page&gt; and &lt;Search results page&gt; are not in the package, and yet they are essential. Is it possible to have these pages in order to have a complete website. I saw written that there were &lt;3 blog pages&gt; on the detail of the pages included in the package on the Marketplace, apart from there is only 1 blog page, is it possible to have the 2 blog pages missing please?",
 			"answer": "The demo version contains all the templates that are included in the Turbo Vanadyl package.",
 			"category": "Templates",
 			"module_template": "Turbo Vanadyl",
@@ -1559,8 +1559,8 @@
 		},
 
 		{
-			"tag": "The <Standard> menu does not show up in Turbo Mercuric Home page.",
-			"question": "I'm trying to have a traditional menu (not a hamburger menu) but when I choose <Standard> instead of <Hamburger> nothing shows up.",
+			"tag": "The &lt;Standard&gt; menu does not show up in Turbo Mercuric Home page.",
+			"question": "I'm trying to have a traditional menu (not a hamburger menu) but when I choose &lt;Standard&gt; instead of &lt;Hamburger&gt; nothing shows up.",
 			"answer": "Here is a video with a piece of information about this issue.",
 			"category": "Templates",
 			"module_template": "Turbo Mercuric",
@@ -1625,7 +1625,7 @@
 
 		{
 			"tag": "How to add and sort questions and answers under new categories in FAQ Templates?",
-			"question": "Basically, in the FAQ template there is one part in the module called <FAQ filters> and it is in CSS/HTML?",
+			"question": "Basically, in the FAQ template there is one part in the module called &lt;FAQ filters&gt; and it is in CSS/HTML?",
 			"answer": "Below there are two links that will take you to screenshots showing how to add and sort questions and answers under new categories in FAQ Template. First one shows how to add new categories. Second one: 1. Question title 2. Answer text (invisible on the preview) 3. Most important: category selector. You need to select which category is the parent of the current question. There are numbers from 1 - 7.",
 			"category": "Custom modules",
 			"module_template": "",
@@ -1649,8 +1649,243 @@
             "url_1": "http://customizer.clickray.eu/",
             "url_2": "",
             "url_3": ""
+		},
+
+
+		{
+			"tag": "Tell me about your templates.",
+			"question": "",
+			"answer": "Our Turbo Templates are pretty awesome. We have created them in accordance with the latest standards and requirements of HubSpot. They have been designed with current web development trends and best practices. They support a drag and drop function and are created by one of the best HubSpot certified teams in Poland. If you want to learn more about our templates, here you will find documentation about them.",
+			"category": "Templates",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://marketing.clickray.eu/turbo-documentation",
+            "url_2": "",
+            "url_3": ""
+		},
+
+
+		{
+			"tag": "What templates do you offer?",
+			"question": "",
+			"answer": "At this moment, our offer includes 5 unusual templates created specifically to satisfy the most demanding tastes: Turbo Sodium, Turbo Vanadyl, Turbo Nickel, Turbo Potassium, Turbo Mercuric.",
+			"category": "Templates",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://marketing.clickray.eu/turbo-sodium-home-v1-main",
+            "url_2": "http://marketing.clickray.eu/turbo-vanadyl-home-v1-main",
+            "url_3": "http://marketing.clickray.eu/turbo-nickel-blog-v1-sidebar"
+		},
+
+		{
+			"tag": "Present me your offer.",
+			"question": "",
+			"answer": "Our offer consists of three services, each of which is performed with the highest precision, attention to details and highest care for customer satisfaction. We specialize in website development. We have dedicated a lot of time and effort to develop our qualifications in creating comprehensive web pages which engage visitors, convert prospects, and simply delight your customers. We provide you a user-centric custom web design, during which our proven 5-step Web Design process will bring the greatest benefits from cooperation. If you want to learn more about our process, click first link. Our team of specialists is at your disposal ready to start working on your brand-new website design. All you need to do is to schedule a talk and decide with our specialist about the scope of work needed - click second link. You may also take advantage of our Website Monthly Support Package and get some help from us in making small improvements or serious changes on your website. And if you decided to buy one of our Turbo Templates, you may benefit from Template Customization Hourly Packages. Pick one which suits best to your needs and start a customization process. Click third link here to learn more!",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://clickray.eu/hubspot-custom-webdesign/#wd-process2",
+            "url_2": "http://marketing.clickray.eu/custom-webdesign",
+            "url_3": "https://clickray.eu/hubspot-templates/template-customization/"
+		},
+
+		{
+			"tag": "I want to buy one of your Turbo Templates.",
+			"question": "",
+			"answer": "Do you want to buy one of our Turbo Templates? We are extremely happy that you chose our offer. Take a look at the following list and decide which of our templates will best meet your expectations: Simple and elegant Turbo Sodium, Intuitive and effective Turbo Vanadyl, Light and joyful Turbo Nickel, Attention-grabbing and professional Turbo Potassium, Candy and progressive Turbo Mercuric!",
+			"category": "Templates",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://marketing.clickray.eu/turbo-sodium-home-v1-main",
+            "url_2": "http://marketing.clickray.eu/turbo-vanadyl-home-v1-main",
+            "url_3": "http://marketing.clickray.eu/turbo-nickel-blog-v1-sidebar"
+		},
+
+		{
+			"tag": "I need some help with your template.",
+			"question": "",
+			"answer": "Firstly please check whether the answers you look for are not in our documentation or they are not included in one of our FAQs. If the question concerns HubSpot in general, look if the response is not included in their documentation and tutorials. You may also write directly to HubSpot Support. Please, keep in mind, that we are not responsible for your own modifications to the templates. However, if you bought the whole set, then you have an opportunity to use free hour-long technical support, which we attach to every Whole Template Pack purchased. In case of need of other changes or more support, consider our Template Customization Hourly Packages offer, which will help in your template customization process.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://marketing.clickray.eu/turbo-documentation",
+            "url_2": "https://clickray.eu/faq/",
+            "url_3": "https://clickray.eu/hubspot-templates/template-customization/"
+		},
+
+		{
+			"tag": "Do you provide customer support?",
+			"question": "",
+			"answer": "As a customer-centered company, we want cooperation between us and our clients to be as good as possible and to be as effective as possible for both parties, which is why we provide a wide range of support for our clients. You may take advantage of our Website Monthly Support Package and get some help from us in making small improvements or serious changes on your website. Check the offer here in first link. If you bought the whole set of one of our Turbo Templates, then you have an opportunity to use free hour-long technical support, which we attach to every Whole Template Pack purchased. You may also benefit from Template Customization Hourly Packages. Pick one which suits best to your needs and start a customization process. Click here in second link to learn more.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://clickray.eu/hubspot-custom-webdesign/",
+            "url_2": "https://clickray.eu/hubspot-templates/template-customization/",
+            "url_3": ""
+		},
+
+		{
+			"tag": "Will you edit (customize) my template?",
+			"question": "",
+			"answer": "If you bought the whole set of one of our Turbo Templates, then you have an opportunity to use free hour-long technical support, which we attach to every Whole Template Pack purchased. You may also benefit from Template Customization Hourly Packages. Pick one which suits best to your needs and start a customization process. Click here to learn more. ",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://clickray.eu/hubspot-templates/template-customization/",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "My template is broken.",
+			"question": "",
+			"answer": "Our templates meet all the expectations and requirements of HubSpot. They are tested both by our in-house testers and by the HubSpot specialists who allow the templates for sale. Make sure whether the errors are not due to other files in your account. Pay special attention to JS files, which may be attached globally to all the templates. Try to look for answers in HubSpot documentation and tutorials. You can also contact them directly via HubSpot Support. If nothing brings you closer to resolve the situation, write to us, and we will try to solve it as efficiently as possible. Remember that the speed of our reaction depends on the situation of our pipeline. ",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "I want to buy support so that you may help me with the templates customization.",
+			"question": "",
+			"answer": "I want to buy support so that you may help me with the template’s customization. As a customer-centered company, we want cooperation between us and our clients to be as good as possible and to be as effective as possible for both parties, which is why we provide a wide range of support for our clients. If you bought the whole set of one of our Turbo Templates, then you have an opportunity to use free hour-long technical support, which we attach to every Whole Template Pack purchased. You may also benefit from Template Customization Hourly Packages. Pick one which suits best to your needs and start a customization process. Click here to learn more. ",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://clickray.eu/hubspot-templates/template-customization/",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "I want to create a website from scratch, do you offer any custom web design?",
+			"question": "",
+			"answer": "I want to create a website from scratch, do you offer any custom web design? As a customer-centered company, we want cooperation between us and our clients to be as good as possible and to be as effective as possible for both parties, which is why we provide a wide range of support for our clients. We provide you a user-centric custom web design, during which our proven 5-step Web Design process will bring the greatest benefits from cooperation. If you want to learn more about our process, click the first link. Our team of specialists is at your disposal ready to start working on your brand-new website design. All you need to do is to schedule a talk and decide with our specialist about the scope of work needed.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://clickray.eu/hubspot-custom-webdesign/#wd-process2",
+            "url_2": "http://marketing.clickray.eu/custom-webdesign",
+            "url_3": ""
+		},
+
+		{
+			"tag": "Tell me more about your bot.",
+			"question": "",
+			"answer": "Our Clickray bot is an advanced tool specially created to respond to the needs of our customers in the best and fastest possible way. We know that the first impression counts, so we don’t want to waste your time. Right from the start, you choose whether you need help or are interested in purchasing something from our offer. The whole interaction is really simple and user-friendly. The bot is based on artificial intelligence and is constantly learning in order to be able to respond to the most current needs.",
+			"category": "Custom modules",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "What does Mercuric Modular consist of?",
+			"question": "",
+			"answer": "Mercuric Modular is a total of 100 amazingly designed templates and 137 Custom Modules that allow you to create entirely new templates. There are 3 packages available: Mercuric Modular Standard - consists of 20 templates, Mercuric Modular Advanced - consists of 50 templates, Mercuric Modular Premium - consists of 100 templates. Naturally, you may also purchase individual templates of the pages you are interested in. Full description of Mercuric Modular content can be found here.",
+			"category": "Templates",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=content",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to change navigation in Mercuric Modular?",
+			"question": "",
+			"answer": "The type of navigation can be set individually for each template or independently for individual pages built on the same template. If you want to change the type of navigation for one template globally, you have to set it in the template (in the Design Manager). If you want to make changes in only one page created on the template, go to Content Editor. For more details and step-by-step instructions on how to change the type of navigation, see the Mercuric Modular documentation.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=change-type-of-navigation",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to set the color changeable logo in Mercuric Modular?",
+			"question": "",
+			"answer": "To set the logo, which changes color while scrolling the page, you just need to go to the Design Manager and open Mercuric Modular template at the first place. There find the right module (me-header-color-and-logo-swap-config) and activate the /Swap logo on scroll?/ button. And half the process is behind you. What to do next? You will learn from our documentation.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=logo-swap",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to change background color in Mercuric Modular?",
+			"question": "",
+			"answer": "The colors assigned to the class are defined in the main CSS file (mercuric-styles.css) in its first lines as variables. To change background color add one of our classes to CSS field in template (Design Manager). A class with background color should be applied to the top parent group of modules/columns. This will change the background within the whole group. Need more details? Check our documentation.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=layout-background-color",
+            "url_2": "",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to change font-s color in Mercuric Modular?",
+			"question": "",
+			"answer": "Mercuric Modular has 2 basic font colors: one for the most typographic elements, such as paragraphs and lists, second for headers and some menu type items. Both colors are declared as variables in the main CSS file (css - mercuric-styles.css). To see which elements will change after setting a different color, use our customizer. It also makes it easier to implement the changes by generating CSS code in the main style sheet. Is something not clear? Look here for more detailed information.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://customizer.clickray.eu/",
+            "url_2": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=typography-text-color",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to deactivate the -wow- animation?",
+			"question": "",
+			"answer": "All you need to do is to remove the fragment /wow fadeIn…/ from the CSS class field in the Design Manager, to deactivate animation. If you want to learn more click here. You can also change your animations freely by entering one of the available classes Animate.css.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "https://daneden.github.io/animate.css/",
+            "url_2": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=disable-wow",
+            "url_3": ""
+		},
+
+		{
+			"tag": "How to customize Mercuric Modular template?",
+			"question": "",
+			"answer": "If you want to adjust the Mercuric Modular colors to better match the color identification of your brand, use our easy-to-use customizer. To make it easier to customize themes, Mercuric Modular comes with a number of predefined CSS classes designed to allow you to make minor changes from the Design Manager level, without unnecessary interfering with the CSS files. Just add any class to the CSS field to get the desired effect. If you want to learn more about the defined CSS classes, check our Mercuric Modular documentation. Please, keep in mind that the basic knowledge of HubSpot Design Manager is recommended. If you do not feel too confident with this tool, it is worthwhile to use their official documentation and tutorials. The best place to start learning is here: Get started with the design manager.",
+			"category": "Templates customization",
+			"module_template": "",
+			"src_1": "",
+            "src_2": "",
+            "url_1": "http://customizer.clickray.eu/",
+            "url_2": "https://marketing.clickray.eu/mercuric-modular/documentation?id=1&cat=layout",
+            "url_3": "https://knowledge.hubspot.com/articles/kcs_article/cos-general/get-started-with-the-design-manager?__hstc=53908087.0e055654d6d67d16a9cbaded36a15133.1517842425421.1566460759184.1566468646511.271&__hssc=53908087.1.1566468646511&__hsfp=4184788918"
 		}
-		
 
 
 	]
